@@ -98,6 +98,7 @@ function Product({result}) {
 
   return (
     <Layout
+      initialSearchValue=""
       onSearch={(query) => {
         return router.push({
           pathname: '/rickandmorty/search',
