@@ -18,7 +18,7 @@ function Products({results}) {
       initialSearchValue=""
       onSearch={(query) => {
         return router.push({
-          pathname: 'search',
+          pathname: '/rickandmorty/search',
           query: {
             q: query,
             page: 1,

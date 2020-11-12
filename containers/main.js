@@ -13,7 +13,7 @@ function Main(_props) {
       initialSearchValue=""
       onSearch={(query) => {
         return router.push({
-          pathname: 'search',
+          pathname: '/rickandmorty/search',
           query: {
             q: query,
             page: 1,
