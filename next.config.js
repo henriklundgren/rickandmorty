@@ -2,6 +2,6 @@ const debug = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   generateBuildId: async () => 'current',
-  assetPrefix: !debug ? '/rickmorty' : '',
+  assetPrefix: !debug ? '/rickandmorty' : '',
 };
 
