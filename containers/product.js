@@ -100,7 +100,7 @@ function Product({result}) {
     <Layout
       onSearch={(query) => {
         return router.push({
-          pathname: '/search',
+          pathname: 'search',
           query: {
             q: query,
             page: 1,
