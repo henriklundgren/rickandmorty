@@ -18,7 +18,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontSize: 16,
+    fontSize: 15,
   },
   overrides: {
     MuiCssBaseline: {

@@ -22,6 +22,7 @@ function Search({value, onChange, onDone, q}) {
       <Button
         className={classes.button}
         variant="contained"
+        size="small"
       >
         {/* TODO */}
         Characters

@@ -6,10 +6,24 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark'
+  },
+  props: {
+    MuiAppBar: {
+      component: 'footer'
+    },
+  },
+});
+
 function Footer() {
   return (
-    <ThemeProvider theme={createMuiTheme({ palette: { type: 'dark' } })}>
-      <AppBar color="default" position="static">
+    <ThemeProvider theme={theme}>
+      <AppBar
+        color="default"
+        position="static"
+      >
         <Toolbar>
           <Container>
             <Link

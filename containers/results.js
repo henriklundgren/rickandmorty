@@ -50,57 +50,24 @@ function Results({results}) {
   }
 
   return (
-      <Container
-        className={classes.container}
-        maxWidth={false}
-      >
-        <ResultsList
-          results={items}
-          page={page}
-          pages={pages}
-          onChange={(_evt, page) => {
-            return router.push({
-              query: {
-                ...router.query,
-                page,
-              }
-            });
-          }}
-        />
-      </Container>
-  );
-  return (
-    <Layout
-      initialSearchValue={q}
-      onSearch={(query) => {
-        return router.push({
-          pathname: '/search',
-          query: {
-            q: query,
-            page: 1,
-          }
-        });
-      }}
+    <Container
+      className={classes.container}
+      maxWidth={false}
     >
-      <Container
-        className={classes.container}
-        maxWidth={false}
-      >
-        <ResultsList
-          results={items}
-          page={page}
-          pages={pages}
-          onChange={(_evt, page) => {
-            return router.push({
-              query: {
-                ...router.query,
-                page,
-              }
-            });
-          }}
-        />
-      </Container>
-    </Layout>
+      <ResultsList
+        results={items}
+        page={page}
+        pages={pages}
+        onChange={(_evt, page) => {
+          return router.push({
+            query: {
+              ...router.query,
+              page,
+            }
+          });
+        }}
+      />
+    </Container>
   );
 }
 

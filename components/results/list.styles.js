@@ -5,7 +5,6 @@ const useStyles = makeStyles({
     listStyle: 'none',
     padding: 0,
     flex: 1,
-    border: '1px solid #BDBDBD'
   },
 });
 
