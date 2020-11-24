@@ -50,6 +50,26 @@ function Results({results}) {
   }
 
   return (
+      <Container
+        className={classes.container}
+        maxWidth={false}
+      >
+        <ResultsList
+          results={items}
+          page={page}
+          pages={pages}
+          onChange={(_evt, page) => {
+            return router.push({
+              query: {
+                ...router.query,
+                page,
+              }
+            });
+          }}
+        />
+      </Container>
+  );
+  return (
     <Layout
       initialSearchValue={q}
       onSearch={(query) => {

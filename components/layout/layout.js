@@ -6,14 +6,15 @@ import Header from './header.js';
 import Search from './search.js';
 import useStyles from './layout.styles.js';
 
-function Layout({children, initialSearchValue, onSearch}) {
+function Layout({
+  children,
+  title,
+  initialSearchValue,
+  onSearch,
+  value,
+  onChange,
+}) {
   const classes = useStyles();
-  const [value, setSearch] = React.useState(undefined);
-  const title = 'Rick and Morty';
-
-  React.useEffect(() => {
-    setSearch(initialSearchValue);
-  }, []);
 
   if (value === undefined) {
     return null;
@@ -30,7 +31,7 @@ function Layout({children, initialSearchValue, onSearch}) {
         searchComponent={
           <Search
             q={initialSearchValue}
-            onChange={(_, value) => setSearch(value)}
+            onChange={(_, value) => onChange(value)}
             value={value}
             onDone={onSearch}
           />

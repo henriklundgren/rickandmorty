@@ -9,23 +9,10 @@ function Main(_props) {
   const classes = useStyles();
 
   return (
-    <Layout
-      initialSearchValue=""
-      onSearch={(query) => {
-        return router.push({
-          pathname: '/search',
-          query: {
-            q: query,
-            page: 1,
-          }
-        });
-      }}
-    >
-      <Container className={classes.root}>
-        {/* promotion component */}
-        <div />
-      </Container>
-    </Layout>
+    <Container className={classes.root}>
+      {/* promotion component */}
+      <div />
+    </Container>
   );
 }
 

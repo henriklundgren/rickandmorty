@@ -7,41 +7,28 @@ import ResultsList from '../components/results';
 function Products({results}) {
   const router = useRouter();
   const page = Number(router.query.page);
-  const q = router.query.q;
+  //const q = router.query.q;
   const limit = 6 * 4;
   const start = page * limit - limit;
   const end = page * limit;
   const pages = Math.ceil(results.length / limit);
 
   return (
-    <Layout
-      initialSearchValue=""
-      onSearch={(query) => {
-        return router.push({
-          pathname: '/search',
-          query: {
-            q: query,
-            page: 1,
-          }
-        });
-      }}
-    >
-      <Container maxWidth={false}>
-        <ResultsList
-          results={results.slice(start, end)}
-          page={page}
-          pages={pages}
-          onChange={(_evt, page) => {
-            return router.push({
-              query: {
-                ...router.query,
-                page,
-              }
-            });
-          }}
-        />
-      </Container>
-    </Layout>
+    <Container maxWidth={false}>
+      <ResultsList
+        results={results.slice(start, end)}
+        page={page}
+        pages={pages}
+        onChange={(_evt, page) => {
+          return router.push({
+            query: {
+              ...router.query,
+              page,
+            }
+          });
+        }}
+      />
+    </Container>
   );
 }
 

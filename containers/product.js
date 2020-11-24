@@ -97,34 +97,21 @@ function Product({result}) {
   const router = useRouter();
 
   return (
-    <Layout
-      initialSearchValue=""
-      onSearch={(query) => {
-        return router.push({
-          pathname: '/search',
-          query: {
-            q: query,
-            page: 1,
-          }
-        });
-      }}
+    <Container
+      maxWidth={false}
+      style={{ display: 'flex' }}
     >
-      <Container
-        maxWidth={false}
-        style={{ display: 'flex' }}
-      >
-        {do {
-          if (!result || result.error) {
-            <NoProduct />;
-          } else {
-            <Main
-              name={result.name}
-              image={result.image}
-            />;
-          }
-        }}
-      </Container>
-    </Layout>
+      {do {
+        if (!result || result.error) {
+          <NoProduct />;
+        } else {
+          <Main
+            name={result.name}
+            image={result.image}
+          />;
+        }
+      }}
+    </Container>
   );
 }
 
