@@ -20,7 +20,7 @@ function Header({title = '', searchComponent}) {
         >
           <Grid item>
             <Link
-              href="/rickandmorty/"
+              href="/"
               passHref
             >
               <Typography

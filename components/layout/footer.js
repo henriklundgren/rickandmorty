@@ -14,7 +14,7 @@ function Footer() {
           <Container>
             <Link
               href={{
-                pathname: '/rickandmorty/products',
+                pathname: '/products',
                 query: {
                   page: 1,
                 },

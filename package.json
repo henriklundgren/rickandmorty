@@ -7,7 +7,7 @@
   "homepage": "https://henriklundgren.github.io/rickandmorty/",
   "scripts": {
     "start": "next",
-    "build": "env NODE_ENV=production next build && next export -o dist",
+    "build": "env NODE_ENV=production next build && next export -o dist && touch dist/.nojekyll",
     "deploy": "npm run build && touch dist/.nojekyll && gh-pages -t true -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

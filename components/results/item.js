@@ -10,7 +10,7 @@ import useStyles from './item.styles.js';
 
 function Item({id, name, image, episode, location}) {
   const classes = useStyles();
-  const href = `/rickandmorty/products/${id}`;
+  const href = `/products/${id}`;
 
   return (
     <Grid
