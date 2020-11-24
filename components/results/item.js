@@ -15,6 +15,7 @@ function Item({id, name, image, episode, location}) {
   return (
     <Grid
       item
+      style={{ position: 'relative' }}
       xs={12}
       sm={6}
       md={4}
@@ -22,6 +23,7 @@ function Item({id, name, image, episode, location}) {
     >
       <Card
         square
+        raised
         elevation={0}
       >
         <Link
