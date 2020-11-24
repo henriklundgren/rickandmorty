@@ -8,7 +8,7 @@ import useStyles from './layout.styles.js';
 function Layout({children, initialSearchValue, onSearch}) {
   const classes = useStyles();
   const [value, setSearch] = React.useState(undefined);
-  const title = 'Rick and Morty Store';
+  const title = 'Rick and Morty';
 
   React.useEffect(() => {
     setSearch(initialSearchValue);
